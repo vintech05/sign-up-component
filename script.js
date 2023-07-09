@@ -1,3 +1,5 @@
+'use strict';
+
 const form = document.querySelector('form');
 const submitBtn = document.querySelector('trial')
 const password = document.querySelector('password');
