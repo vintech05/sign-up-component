@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* primary */
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Bright-Green: hsla(154, 68%, 63%, 0.952);
+
+    /* accent */
+    --Blue: hsl(248, 32%, 49%);
+
+    /* neutral */
+    --Dark-Blue: hsl(249, 10%, 26%); 
+    --Grayish-Blue: hsl(246, 25%, 77%);
+
+    /* body */
+    --f-size: 16px
+}
+
+body {
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--Red);
+    font-size: var(--f-size);
+    overflow-x: hidden;
+}
+
+.intro-page {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+}
+
+.first-section{
+    display: flex;
+    flex-direction: column;
+    padding-top: 7em;
+}
+
+.intro-title {
+    font-size: 2em;
+    color: white;
+    font-weight: 700;
+    padding-bottom: .75em;
+    line-height: 2em;
+}
+
+.intro-desc {
+    color: white;
+    font-weight: 400;
+    min-width: 100%;
+}
+
+.intro-form {
+    text-align: center;
+    background-color: white;
+    padding: 2em 1.5em .5em 1.5em;
+    border-radius: .75em;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 4px, rgba(0, 0, 0, 0.2) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.intro-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.intro-form form input {
+    width: 95%;
+    padding-block: 1em;
+    padding-inline: 7em;
+    padding-left: 2em;
+    border-radius: .35em;
+    border: 1px solid var(--Grayish-Blue);
+    font-weight: 600;
+}
+
+.intro-form form input:focus {
+    outline: none;
+}
+
+.try-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.try-btn button {
+    font-family: inherit;
+    padding-block: 1em;
+    padding-inline: 6em;
+    font-weight: 700;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: var(--Blue);
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 7px 13px -3px, rgba(0, 0, 0, 0.3) 0px -3px 0px inset;
+    border-radius: .35em;
+}
+
+.try-btn button span {
+    font-weight: 400;
+}
+
+.intro-form button,
+.intro-form input {
+    font-family: inherit;
+}
+
+form button {
+    padding-top: .55em;
+}
+
+form button {
+    padding-block: .95em;
+    padding-inline: 7em;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--Green);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 7px 13px -3px, rgba(0, 0, 0, 0.3) 0px -3px 0px inset;
+    border-radius: .35em;
+    transition: all 300ms ease-in-out;
+}
+
+form button:hover {
+    background-color: var(--Bright-Green);
+}
+
+.terms-services p {
+    padding-block: 2em;
+    font-size: .55em;
+    color: var(--Grayish-Blue);
+}
+
+.terms-services p span {
+    color: var(--Red);
+    font-weight: 700;
+}
+
+.error-text {
+    padding-top: .35em;
+    padding-right: 1em;
+    font-size: 0.55em;
+    color: var(--Red);
+    font-style: italic;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 600px),
+screen and (max-width: 822px) {
+    .intro-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-inline: 1.5em;
+        margin-block: 2em;
+    }
+
+    .first-section {
+        padding-top: 4em;
+    }
+}
+
+ 
+
