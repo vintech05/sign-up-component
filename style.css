@@ -81,9 +81,10 @@ body {
 }
 
 .intro-form form input {
-    width: 95%;
+    position: relative;
+    width: 100%;
     padding-block: 1em;
-    padding-inline: 7em;
+    padding-inline: 6em;
     padding-left: 2em;
     border-radius: .35em;
     border: 1px solid var(--Grayish-Blue);
