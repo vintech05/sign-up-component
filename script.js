@@ -1,12 +1,11 @@
-'use strict';
-
 const form = document.querySelector('form');
 const submitBtn = document.querySelector('trial')
 const password = document.querySelector('password');
+const successMsg = document.querySelector('.success');
+const inputs = document.querySelectorAll('input');
 
     form.addEventListener('submit', (e) => {
 
-        const inputs = document.querySelectorAll('input');
   
         inputs.forEach(input => {
           input.nextElementSibling.innerHTML = '';
@@ -22,15 +21,20 @@ const password = document.querySelector('password');
             setError(input, 'Looks like this is not an email');
             input.style.outline = '2px solid var(--Red)';
             input.style.color = 'var(--Red)';
-          } 
-
-          e.preventDefault();
-          e.target.blur();
+          } else {
+            input.style.outline = '2px solid var(--Green)';
+            input.style.color = 'var(--Green)';
+            // input.nextElementSibling.insertAdjacentHTML('beforeend', successMarkup(val));
+          }
           
-        });
+        });        
+        e.preventDefault();
+        e.target.blur();
     })
     
     submitBtn.addEventListener('click', (e) => {
+      
+
       e.preventDefault();
       e.target.blur();
     });
