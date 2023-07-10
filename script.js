@@ -11,9 +11,10 @@ const password = document.querySelector('password');
         inputs.forEach(input => {
           input.nextElementSibling.innerHTML = '';
           const val = input.value.trim();
+          const desc = input.placeholder;
   
           if (val === '') {
-            setError(input, `this field cannot be empty`);
+            setError(input, `${desc} cannot be empty`);
             input.style.outline = '2px solid var(--Red)';
             input.style.color = 'var(--Red)';
   
